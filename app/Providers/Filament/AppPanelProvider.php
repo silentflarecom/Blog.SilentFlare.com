@@ -27,7 +27,7 @@ class AppPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->tenant(\App\Models\Tenant::class, slugAttribute: 'id')
-            ->tenantDomain(fn (\App\Models\Tenant $tenant) => $tenant->domain)
+            ->tenantDomain('{tenant:domain}')
             ->colors([
                 'primary' => Color::Amber,
             ])
