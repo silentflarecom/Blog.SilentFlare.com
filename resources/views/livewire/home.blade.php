@@ -1,10 +1,8 @@
 <div>
-    <div class="mb-8">
-        <h1 class="text-4xl font-bold text-sf-text mb-2 neon-text">Latest Articles</h1>
-        <p class="text-sf-text-muted">Thoughts, tutorials, and insights on development and design.</p>
+    <div class="mb-8 pl-1">
     </div>
 
-    <div class="grid gap-6 md:grid-cols-2">
+    <div class="grid gap-6 grid-cols-1">
         @foreach($posts as $post)
             <x-post-card :post="$post" />
         @endforeach

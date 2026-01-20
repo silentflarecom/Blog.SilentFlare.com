@@ -32,13 +32,13 @@
                         <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                             Home
                         </x-nav-link>
-                        <x-nav-link href="#" :active="request()->routeIs('categories')">
+                        <x-nav-link href="{{ route('categories') }}" :active="request()->routeIs('categories')">
                             Categories
                         </x-nav-link>
-                        <x-nav-link href="#" :active="request()->routeIs('archives')">
+                        <x-nav-link href="{{ route('archives') }}" :active="request()->routeIs('archives')">
                             Archives
                         </x-nav-link>
-                         <x-nav-link href="#" :active="request()->routeIs('friends')">
+                         <x-nav-link href="{{ route('friends') }}" :active="request()->routeIs('friends')">
                             Friends
                         </x-nav-link>
                     </div>
@@ -93,14 +93,14 @@
     <main class="flex-grow pt-24 pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Content Area -->
-                <div class="w-full lg:w-3/4">
-                    {{ $slot }}
-                </div>
-                
                 <!-- Sidebar -->
                 <div class="w-full lg:w-1/4">
                     <x-widgets.sidebar />
+                </div>
+
+                <!-- Content Area -->
+                <div class="w-full lg:w-3/4">
+                    {{ $slot }}
                 </div>
             </div>
         </div>
