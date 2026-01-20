@@ -8,4 +8,50 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    --color-sf-bg: #0f0f12;
+    --color-sf-card: #18181b;
+    --color-sf-border: #27272a;
+    --color-sf-text: #e4e4e7;
+    --color-sf-text-muted: #a1a1aa;
+    --color-sf-accent: #00f0ff;
+    --color-sf-accent-secondary: #bc13fe;
+    --color-sf-success: #22c55e;
+    --color-sf-error: #ef4444;
+}
+
+:root {
+    --sf-glow-primary: 0 0 10px rgba(0, 240, 255, 0.5);
+    --sf-glow-secondary: 0 0 10px rgba(188, 19, 254, 0.5);
+}
+
+body {
+    background-color: var(--color-sf-bg);
+    color: var(--color-sf-text);
+    font-family: var(--font-sans);
+}
+
+.glass-panel {
+    background: rgba(24, 24, 27, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-text {
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+.neon-border {
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.3);
+    border-color: var(--color-sf-accent);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+[x-cloak] {
+    display: none !important;
 }
