@@ -1,6 +1,4 @@
 <div>
-    <div class="mb-8 pl-1">
-    </div>
 
     <div class="grid gap-6 grid-cols-1">
         @foreach($posts as $post)
